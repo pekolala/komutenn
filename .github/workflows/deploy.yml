@@ -21,6 +21,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
           server-dir: www/komutenn/  # さくらサーバー上の公開フォルダパス
+          dangerous-clean-slate: true  # 同期状態を一旦リセットして全ファイルを送る
           exclude: |
             **/.git*
             **/.git*/**
