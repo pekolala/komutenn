@@ -20,7 +20,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
-          server-dir: /www/komutenn/  # さくらサーバー上の公開フォルダパス
+          server-dir: www/komutenn/  # さくらサーバー上の公開フォルダパス
           exclude: |
             **/.git*
             **/.git*/**
