@@ -234,11 +234,23 @@ img {
 
 @media (max-width: 767px) {
     .hero {
-        height: 65vh; /* スマホでは高さを抑えて全体が見えやすくする */
-        min-height: 400px;
+        height: auto;
+        min-height: 100vh;
+        padding: 120px 0 80px; /* 文字が上下で切れないように余白を取る */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     .hero-bg {
-        background-position: center;
+        /* スマホ向けに画像を上部に配置して全体を縮小表示しつつ、余白は背景色でカバーするような動きに調整 */
+        background-position: center top;
+        background-size: cover; 
+    }
+    .hero-title {
+        font-size: clamp(2rem, 8vw, 3rem); /* 少し文字を小さめに */
+    }
+    .hero-description {
+        font-size: 1rem;
     }
 }
 
