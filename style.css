@@ -236,18 +236,24 @@ img {
     .hero {
         height: auto;
         min-height: 100vh;
-        padding: 120px 0 80px; /* 文字が上下で切れないように余白を取る */
+        padding: 100px 0 60px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-end; /* テキストを下部に寄せる */
     }
     .hero-bg {
-        /* スマホ向けに画像を上部に配置して全体を縮小表示しつつ、余白は背景色でカバーするような動きに調整 */
+        /* 画像が横幅100%で切れずに入るように設定 */
+        background-size: 100% auto; 
         background-position: center top;
-        background-size: cover; 
+        background-repeat: no-repeat;
+        background-color: var(--primary); /* 下の隙間をネイビーで塗りつぶす */
+    }
+    .hero::after {
+        /* スマホ向けに上から下へ暗くなるグラデーションを上書き */
+        background: linear-gradient(to bottom, transparent 20%, rgba(27, 54, 93, 0.95) 60%, rgba(27, 54, 93, 1) 100%);
     }
     .hero-title {
-        font-size: clamp(2rem, 8vw, 3rem); /* 少し文字を小さめに */
+        font-size: clamp(2rem, 8vw, 3rem);
     }
     .hero-description {
         font-size: 1rem;
