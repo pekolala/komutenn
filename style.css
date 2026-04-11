@@ -244,7 +244,7 @@ img {
     .hero-bg {
         /* 画像が横幅100%で切れずに入るように設定 */
         background-size: 100% auto; 
-        background-position: center top;
+        background-position: center 70px; /* ナビゲーションバー(70px)の分だけ下にずらして屋根を隠さない */
         background-repeat: no-repeat;
         background-color: var(--primary); /* 下の隙間をネイビーで塗りつぶす */
     }
