@@ -233,8 +233,12 @@ img {
 }
 
 @media (max-width: 767px) {
+    .hero {
+        height: 65vh; /* スマホでは高さを抑えて全体が見えやすくする */
+        min-height: 400px;
+    }
     .hero-bg {
-        background-position: center top;
+        background-position: center;
     }
 }
 
