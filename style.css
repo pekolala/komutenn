@@ -426,6 +426,14 @@ img {
     margin-bottom: 20px;
 }
 
+.service-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* 画像を綺麗にトリミング表示 */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
 /* Cases */
 .cases { background: var(--primary); }
 
