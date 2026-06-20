@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>無料相談・お見積もり | 工務店サイト</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="form-container">
         <header class="form-header">
@@ -106,7 +110,8 @@
             <div class="form-section">
                 <div class="form-group">
                     <label for="message">お問い合わせ内容 <span class="badge required">必須</span></label>
-                    <textarea id="message" name="message" rows="5" placeholder="ご質問やご相談内容を自由にご記入ください" required></textarea>
+                    <textarea id="message" name="message" rows="5" placeholder="ご質問やご相談内容を自由にご記入ください"
+                        required></textarea>
                 </div>
             </div>
 
@@ -132,12 +137,12 @@
             e.preventDefault();
             const submitButton = document.getElementById('submit-button');
             const originalText = submitButton.innerText;
-            
+
             submitButton.disabled = true;
             submitButton.innerText = '送信中...';
 
             const formData = new FormData(form);
-            
+
             try {
                 const response = await fetch(form.action, {
                     method: 'POST',
@@ -170,4 +175,5 @@
         });
     </script>
 </body>
+
 </html>

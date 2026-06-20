@@ -584,3 +584,13 @@ details[open] summary::after {
 .flex { display: flex; }
 .justify-between { justify-content: space-between; }
 .align-end { align-items: flex-end; }
+
+/* PC only display utility (e.g. for line breaks) */
+.pc-only {
+    display: none;
+}
+@media (min-width: 768px) {
+    .pc-only {
+        display: block;
+    }
+}
