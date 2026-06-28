@@ -434,6 +434,10 @@ img {
     margin-bottom: 20px;
 }
 
+.service-card p {
+    text-align: left;
+}
+
 /* Cases */
 .cases { background: var(--primary); }
 
